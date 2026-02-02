@@ -14,7 +14,7 @@
 </div>
 
 <div class="product-grid">
-  @if (products$ | async; as products) { @for (product of products; track product.id) {
+  @for (product of products(); track product.id) {
 
   <div class="product-card" [routerLink]="['/products', product.id]">
     <div class="image-container">
@@ -27,5 +27,9 @@
     </div>
   </div>
 
-  } }
+  } @if(products().length===0){
+  <div class="no-results">
+    <p>No items match your search.</p>
+  </div>
+  }
 </div>

@@ -54,3 +54,52 @@
     }
   }
 }
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  input {
+    width: 180px;
+    padding: 10px 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &::placeholder {
+      color: #999;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      border-bottom-color: #999;
+    }
+
+    &:focus {
+      width: 320px;
+      border-bottom-color: #000;
+
+      &::placeholder {
+        color: #ccc;
+      }
+    }
+  }
+}

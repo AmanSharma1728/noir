@@ -2,6 +2,17 @@
   <div class="container header-content">
     <a routerLink="/" class="logo">NOIR.</a>
 
+    <div class="search-bar">
+      <div class="search-wrapper">
+        <input
+          type="text"
+          placeholder="Search Collection"
+          (input)="onSearch($event)"
+          spellcheck="false"
+        />
+      </div>
+    </div>
+
     <nav class="actions">
       @if (authService.currentUser()?.role === 'seller') {
       <a routerLink="/seller" class="nav-link dashboard-btn">DASHBOARD</a>
