@@ -2,12 +2,12 @@
   @if(product$|async ;as product){
   <div class="detail-grid">
     <div class="image-section">
-      <img [src]="product.image" [alt]="product.name" />
+      <img [src]="product.image" [alt]="product.title" />
     </div>
 
     <div class="info-section">
       <span class="category">{{ product.category }}</span>
-      <h1>{{ product.name }}</h1>
+      <h1>{{ product.title }}</h1>
       <p class="price">{{ product.price | currency }}</p>
 
       <p class="description">
